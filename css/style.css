@@ -21,7 +21,7 @@ body{
 }
 /* heading titles */
 .heading-title{
-    @apply text-[2.75rem] lg:text-[3rem] text-center lg:text-left
+    @apply text-[2.40rem] lg:text-[3rem] text-center lg:text-left
 }
 /* center responsive */
 .center-responsive-paragraph{
@@ -62,4 +62,3 @@ nav li a.active{
 .ctas button.active{
     @apply bg-primary text-white hover:bg-primary-dark duration-300
 }
-
