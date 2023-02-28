@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coastline Empire</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="./dist/output.css" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+</head>
+<body class='font-brand text-text'>
+    <!-- NAVIGATION -->
+    <nav class="w-full h-20 fixed top-0 py-4 px-5 md:px-0 flex justify-between items-center bg-white shadow-lg z-50">
+        <!-- left margin -->
+        <div class="h-full container mx-auto flex justify-between items-center">
+          <!-- logo -->
+            <a href="#home" class="logo h-full flex items-center cursor-pointer">
+              <img src="./assets/logo.png" alt="" class="w-14 h-14 object-cover pointer-events-none">
+              <span class="text-[18px] font-md ml-3 pointer-events-none">Coastline Empire</span>
+            </a>
+            <!-- links -->
+            <ul class="hidden lg:flex items-center space-x-6 links">
+                <!-- link -->
+                <li>
+                    <a class="active px-5 py-2 rounded-md cursor-pointer hover:bg-primary-dark hover:text-white duration-300" href="#home">Home</a>
+                </li>
+                <!-- link -->
+                <li>
+                    <a class="px-5 py-2 rounded-md cursor-pointer hover:bg-primary-dark hover:text-white duration-300" href="#about">About</a>
+                </li>
+                <!-- link -->
+                <li>
+                    <a class="px-5 py-2 rounded-md cursor-pointer hover:bg-primary-dark hover:text-white duration-300" href="#services">Services</a>
+                </li>
+                <!-- link -->
+                <li>
+                    <a class="px-5 py-2 rounded-md cursor-pointer hover:bg-primary-dark hover:text-white duration-300" href="#gallery">Gallery</a>
+                </li>
+                <!-- link -->
+                <li>
+                    <a class="px-5 py-2 rounded-md cursor-pointer hover:bg-primary-dark hover:text-white duration-300" href="#reviews">Reviews</a>
+                </li>
+            </ul>
+            <!-- contact us -->
+            <button class="px-4 py-2 rounded-md bg-primary text-white hover:bg-blue-600 duration-300 hidden lg:block">
+                Contact Us
+            </button>
+            <!-- md menu -->
+            <div class="menus flex space-x-1 lg:hidden">
+                <!-- search -->
+                <button class="w-12 h-12 text-xl cursor-pointer rounded-md hover:bg-slate-300 duration-300">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+                <!-- menu -->
+                <button class="w-12 h-12 text-xl bg-slate-100 cursor-pointer rounded-md hover:bg-slate-300 duration-300" id="menu">
+                    <i class="fa-solid fa-bars pointer-events-none"></i>
+                </button>
+
+            </div>
+        </div>
+    </nav>
+    <!-- MENU SM -->
+    <div class="menu-sm w-full h-fit border border-t-1 lg:hidden bg-white fixed -top-80 transition-all duration-700 py-7 shadow-default z-30" id="toggleMenu">
+        <div class="container mx-auto px-5 md:px-0">
+              <!-- links -->
+              <ul class="space-y-8 links">
+                  <!-- link -->
+                  <li>
+                      <a class="active px-5 py-2 rounded-md cursor-pointer hover:bg-slate-100 duration-300" href="#home">Home</a>
+                  </li>
+                  <!-- link -->
+                  <li>
+                      <a class="px-5 py-2 rounded-md cursor-pointer hover:bg-slate-100 duration-300" href="#about">About</a>
+                  </li>
+                  <!-- link -->
+                  <li>
+                      <a class="px-5 py-2 rounded-md cursor-pointer hover:bg-slate-100 duration-300" href="#services">Services</a>
+                  </li>
+                  <!-- link -->
+                  <li>
+                      <a class="px-5 py-2 rounded-md cursor-pointer hover:bg-slate-100 duration-300" href="#gallery">Gallery</a>
+                  </li>
+                  <!-- link -->
+                  <li>
+                      <a class="px-5 py-2 rounded-md cursor-pointer hover:bg-slate-100 duration-300" href="#reviews">Reviews</a>
+                  </li>
+              </ul>
+              <!-- contact us -->
+              <button class="px-4 py-2 mt-7 rounded-md bg-primary text-white hover:bg-blue-600 duration-300">
+                  Contact Us
+              </button>
+        </div>
+    </div>
+    <!-- MAIN -->
+    <main id="home" class="w-full h-fit lg:h-screen py-40 px-10 bg-no-repeat bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),
+      url(https://images.unsplash.com/photo-1597634285596-01fd1bffe116?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);">
+      
+      <div class="container w-full mx-auto lg:flex justify-between">
+          <div class="lg:w-[50%] text-center lg:text-left text-white md:mt-20">
+              <h3 class="text-lg">Nice Scenery + Hotel + Food</h3>
+              <h1 class="font-black heading-title-main">Experience a 
+                  <span class="text-secondary stroke relative w-fit">
+                      vacation 
+                      <img class="absolute w-full h-[10px] object-cover -bottom-1 -left-1" src="./assets/stroke.png" alt="">
+                    </span>
+                
+                  like no other before!</h1>
+              <p class="mt-5 text-lg md:text-xl md:leading-9 tracking-wider">You'll need to get your rest, and since vacation isn't exactly a top tourist destination, you should be able to find something reasonable.</p>
+              <!-- contact us -->
+              <button class="px-4 py-2 text-lg mt-5 rounded-md bg-secondary text-text hover:bg-blue-600 hover:text-white border-2 hover:border-white duration-300">
+                  Book Now <i class="fa-solid fa-arrow-right ml-2"></i>
+              </button>
+          </div>
+           <!-- images -->
+           <div class="lg:w-[40%] h-fit grid grid-cols-2 gap-4 mt-10">
+              <img class="w-full h-52 object-cover rounded-md shadow-xl border-8" src="https://images.unsplash.com/photo-1544536871-6e891baa163f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGJlYWNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+              <img class="w-full h-52 object-cover rounded-md shadow-xl border-8" src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGJlYWNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+              <img class="w-full h-52 object-cover rounded-md shadow-xl border-8" src="https://images.unsplash.com/photo-1473186578172-c141e6798cf4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fGJlYWNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+              <img class="w-full h-52 object-cover rounded-md shadow-xl border-8" src="https://images.unsplash.com/photo-1538964173425-93884d739596?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fGJlYWNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+          </div>
+      </div>
+
+    </main>
+   <!-- ABOUT -->
+    <section id="about" class="w-full h-fit container mx-auto py-40 px-10 md:px-0 flex flex-col lg:flex-row gap-4">
+        <!-- images -->
+        <div class="left lg:w-[60%] flex items-center justify-center gap-8">
+            <div class="w-[80%] h-fit">
+                <img class="w-full h-full object-contain lg:-mt-12" src="./assets/intro-img.png" alt="">
+            </div>
+        </div>
+        <!-- text -->
+        <div class="right lg:w-[40%]">
+                <h1 class="heading-title font-black leading-[52px]">NOT  YOUR  
+                    <span class="text-secondary stroke relative w-fit">
+                        AVERAGE
+                        <img class="absolute w-full h-[10px] object-cover -bottom-1 -left-1" src="./assets/stroke.png" alt="">
+                    </span> 
+                        VACATION DREAM
+                </h1>
+                <p class="center-responsive-paragraph mt-8 md:leading-9 tracking-wider text-justify">Coastline Empire is where friends and family will always feel at home! More closer to Paradise get where you want to go. Whatever the occasion, Urban living redefined.</p>
+                <!-- contact us -->
+                <button class="center-responsive-button px-4 py-2 text-lg mt-8 rounded-md bg-primary text-white hover:bg-blue-600 duration-300">
+                    <span class="pointer-events-none">Learn more</span> <i class="fa-solid fa-angle-right pointer-events-none ml-2"></i>
+                </button>
+        </div>
+
+    </section>
+    <!-- SERVICES -->
+    <section id="services" class="py-40 px-10 bg-no-repeat bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(https://images.unsplash.com/photo-1668911128139-4db2cc34aa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);">
+        <div class="lg:flex gap-8 container mx-auto">
+            <!-- title -->
+            <div class="title lg:w-[30%] flex flex-col justify-center text-white">
+                <h3 class="text-lg text-center lg:text-left">These is what you need!</h3>
+                <h1 class="heading-title font-black leading-tight">
+                    OUR 
+                    <span class="stroke relative w-fit">AMENITIES
+                        <img class="absolute w-full h-[10px] object-cover -bottom-1 -left-1" src="./assets/stroke.png" alt="">
+                    </span>
+                </h1>
+            </div>
+            <!-- cards -->
+            <div class="lg:w-[65%] grid md:grid-cols-2 lg:grid-cols-3 gap-4 rounded-md mt-10 lg:mt-0">
+                <!-- card -->
+                <div class="card bg-white rounded-md shadow-lg">
+                    <div class="img-container w-full">
+                        <img class="w-full h-[200px] object-cover rounded-md" src="https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2F0ZXJpbmclMjBldmVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                    </div>
+                    <!-- texts -->
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Catering services</h2>
+                        <p class="mt-2"> a food-to-order menu, which includes popular catering service choices like Truffle Beef Belly with Mushroom Truffle Cream. </p>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="card bg-white rounded-md shadow-lg">
+                    <div class="img-container w-full">
+                        <img class="w-full h-[200px] object-cover rounded-md" src="https://images.unsplash.com/photo-1540496905036-5937c10647cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zml0bmVzcyUyMGNlbnRlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" alt="">
+                    </div>
+                    <!-- texts -->
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Atlantis Fitness Center and Spa</h2>
+                        <p class="mt-2"> premier health spot for wellness. Discover our new cardio theater and fitness center complete with state-of-the-art technology. </p>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="card bg-white rounded-md shadow-lg">
+                    <div class="img-container w-full">
+                        <img class="w-full h-[200px] object-cover rounded-md" src="https://images.unsplash.com/photo-1609281424899-46df2f711798?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHNwb3J0cyUyMGJhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" alt="">
+                    </div>
+                    <!-- texts -->
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Sports Bar</h2>
+                        <p class="mt-2">is a great place to bring the family! Lots of TVs to catch every game of every sport. Homemade from scratch food prepared. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- TEAM -->
+    <section id="team" class="w-full h-fit bg-gray-v3 py-40 px-10 md:px-0">
+        <div class="container mx-auto flex flex-col-reverse lg:flex-row gap-4 px-10 lg:px-0">
+            <!-- text -->
+            <div class="right lg:w-[50%] mt-10 lg:mt-0">
+                <h3 class="text-center lg:text-left text-lg">It's about the experience</h3>
+                <h1 class="heading-title font-black leading-tight">WHY PEOPLE CHOSE US?</h1>
+                <p class="center-responsive-paragraph mt-8 text-xl md:leading-9 tracking-wider">
+                    Aside from a relaxing view, we serve best accomadation and low-rate budget on a 5star hotel service which allows any people to enjoy their stays that they can't event imagine.
+                </p>
+                <!-- contact us -->
+                <button class="center-responsive-button px-4 py-2 text-lg mt-8 rounded-md bg-primary text-white hover:bg-blue-600 duration-300">
+                    <span class="pointer-events-none">Learn more</span> <i class="fa-solid fa-angle-right pointer-events-none ml-2"></i>
+                </button>
+            </div>
+            <!-- images -->
+            <div class="left lg:w-[60%] flex items-center justify-center">
+                <div class="w-[80%] h-fit">
+                    <img class="w-[75%] h-full object-contain md:-mt-16 mx-auto" src="../assets/proof-img.png" alt="">
+                </div>
+            </div>
+            </div>
+    </section>
+    <!-- GALLERY -->
+    <div id="gallery" class="py-40 container mx-auto px-10 md:px-0">
+        <!-- heading -->
+        <div class="lg:flex justify-between items-center">
+            <!-- text -->
+            <div class="text">
+                <h3 class="text-lg text-center lg:text-left">These is what you need!</h3>
+                <h1 class="heading-title font-black leading-tight">OUR 
+                    <span class="stroke relative w-fit">
+                        GALLERY
+                        <img class="absolute w-full h-[10px] object-cover -bottom-1 -left-1" src="./assets/stroke.png" alt="">
+                    </span>
+                </h1>
+            </div>
+            <!-- cta -->
+            <div class="ctas flex justify-center lg:justify-start gap-3 mt-12 lg:mt-0">
+                <button id="all" class="active bg-gray-v2 text-text text-md px-6 py-2 rounded-full">
+                    All
+                </button>
+                <button id="townhomes" class="text-md px-4 py-2 rounded-full bg-gray-v2 text-text hover:bg-blue-600 hover:text-white duration-300">
+                    Townhomes
+                </button>
+                <button id="multi-family" class="text-md px-4 py-2 rounded-full bg-gray-v2 text-text hover:bg-blue-600 hover:text-white duration-300">
+                    Multi-family
+                </button>
+                <button id="apartments" class="text-md px-4 py-2 rounded-full bg-gray-v2 text-text hover:bg-blue-600 hover:text-white duration-300">
+                    Apartments
+                </button>
+            </div>
+        </div>
+        <!-- cards -->
+        <div class="cards h-fit grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-8 mt-10 md:mt-20" style="grid-auto-rows: 1fr;">
+            <!-- card -->
+            <div class="card flex h-full bg-white cursor-pointer relative shadow-default" category="apartments" id="gallery-card" style="grid-auto-rows: 1fr;">
+                <img class="flex flex-1 rounded-md pointer-events-none" src="https://images.unsplash.com/photo-1596178067639-5c6e68aea6dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHJlc29ydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                <div class="w-full h-fit absolute bottom-0 bg-overlay text-white py-3 px-4 opacity-0 duration-700" id="gallery-desc">
+                    <div class="flex gap-4 items-center">
+                        <h2 class="text-lg font-semibold w-full max-w-[70%]">Pool Area - Medium Room</h2>
+                        <div class="flex gap-2 text-secondary">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-md">
+                        <i class="fa-solid fa-user mr-2"></i>
+                        <span>3-5 persons</span>
+                    </h4>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card flex h-full cursor-pointer relative shadow-default" category="apartments" id="gallery-card" style="grid-auto-rows: 1fr;">
+                <img class="flex flex-1 rounded-md pointer-events-none" src="https://images.unsplash.com/photo-1606402179428-a57976d71fa4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHJlc29ydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" alt="">
+                <div class="w-full h-fit absolute bottom-0 bg-overlay text-white py-3 px-4 opacity-0 duration-700" id="gallery-desc">
+                    <div class="flex gap-4 items-center">
+                        <h2 class="text-lg font-semibold w-full max-w-[70%]">Event Rooms</h2>
+                        <div class="flex gap-2 text-secondary">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-md">
+                        <i class="fa-solid fa-user mr-2"></i>
+                        <span>10-15 persons</span>
+                    </h4>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card flex h-full cursor-pointer relative shadow-default" category="apartments" id="gallery-card" style="grid-auto-rows: 1fr;">
+                <img class="flex flex-1 rounded-md pointer-events-none" src="https://images.unsplash.com/photo-1617859047452-8510bcf207fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDd8fHJlc29ydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                <div class="w-full h-fit absolute bottom-0 bg-overlay text-white py-3 px-4 opacity-0 duration-700" id="gallery-desc">
+                    <div class="flex gap-4 items-center">
+                        <h2 class="text-lg font-semibold w-full max-w-[70%]">Beach</h2>
+                        <div class="flex gap-2 text-secondary">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-md">
+                        <i class="fa-solid fa-user mr-2"></i>
+                        <span>For All</span>
+                    </h4>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card flex cursor-pointer relative shadow-default" category="apartments" id="gallery-card">
+                <img class="flex flex-1 rounded-md pointer-events-none" src="https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzb3J0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+                <div class="w-full h-fit absolute bottom-0 bg-overlay text-white py-3 px-4 opacity-0 duration-700" id="gallery-desc">
+                    <div class="flex gap-4 items-center">
+                        <h2 class="text-lg font-semibold w-full max-w-[70%]">Private Space</h2>
+                        <div class="flex gap-2 text-secondary">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-md">
+                        <i class="fa-solid fa-user mr-2"></i>
+                        <span>13-15 persons</span>
+                    </h4>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card flex  cursor-pointer relative shadow-default" category="townhomes" id="gallery-card">
+                <img class="flex flex-1 rounded-md pointer-events-none" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cmVzb3J0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+                <div class="w-full h-fit absolute bottom-0 bg-overlay text-white py-3 px-4 opacity-0 duration-700" id="gallery-desc">
+                    <div class="flex gap-4 items-center">
+                        <h2 class="text-lg font-semibold w-full max-w-[70%]">Family Treat</h2>
+                        <div class="flex gap-2 text-secondary">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-md">
+                        <i class="fa-solid fa-user mr-2"></i>
+                        <span>10-12 persons</span>
+                    </h4>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card flex cursor-pointer relative shadow-default" category="townhomes" id="gallery-card">
+                <img class="flex flex-1 rounded-md pointer-events-none" src="https://images.unsplash.com/photo-1623718649591-311775a30c43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHJlc29ydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" alt="">
+                <div class="w-full h-fit absolute bottom-0 bg-overlay text-white py-3 px-4 opacity-0 duration-700" id="gallery-desc">
+                    <div class="flex gap-4 items-center">
+                        <h2 class="text-lg font-semibold w-full max-w-[70%]">Pool Area 2 </h2>
+                        <div class="flex gap-2 text-secondary">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-md">
+                        <i class="fa-solid fa-user mr-2"></i>
+                        <span>All person</span>
+                    </h4>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card flex cursor-pointer relative shadow-default" category="townhomes" id="gallery-card">
+                <img class="flex flex-1 rounded-md pointer-events-none" src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJlc29ydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" alt="">
+                <div class="w-full h-fit absolute bottom-0 bg-overlay text-white py-3 px-4 opacity-0 duration-700" id="gallery-desc">
+                    <div class="flex gap-4 items-center">
+                        <h2 class="text-lg font-semibold w-full max-w-[70%]">Intimate Room</h2>
+                        <div class="flex gap-2 text-secondary">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-md">
+                        <i class="fa-solid fa-user mr-2"></i>
+                        <span>1-2 persons</span>
+                    </h4>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card flex cursor-pointer relative shadow-default" category="multi-family" id="gallery-card">
+                <img class="flex flex-1 rounded-md pointer-events-none" src="https://images.unsplash.com/photo-1601701119533-fde20cecbf4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHJlc29ydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" alt="">
+                <div class="w-full h-fit absolute bottom-0 bg-overlay text-white py-3 px-4 opacity-0 duration-700" id="gallery-desc">
+                    <div class="flex gap-4 items-center">
+                        <h2 class="text-lg font-semibold w-full max-w-[70%]">Bar Club</h2>
+                        <div class="flex gap-2 text-secondary">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-md">
+                        <i class="fa-solid fa-user mr-2"></i>
+                        <span>All persons</span>
+                    </h4>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card flex cursor-pointer relative shadow-default" category="multi-family" id="gallery-card">
+                <img class="flex flex-1 rounded-md pointer-events-none" src="https://images.unsplash.com/photo-1596436889106-be35e843f974?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHJlc29ydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" alt="">
+                <div class="w-full h-fit absolute bottom-0 bg-overlay text-white py-3 px-4 opacity-0 duration-700" id="gallery-desc">
+                    <div class="flex gap-4 items-center">
+                        <h2 class="text-lg font-semibold w-full max-w-[70%]">Wedding Venue</h2>
+                        <div class="flex gap-2 text-secondary">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-md">
+                        <i class="fa-solid fa-user mr-2"></i>
+                        <span>100-150 persons</span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- REVIEWS -->
+    <section id="reviews" class="py-40 px-10 bg-primary-light">
+        <div class="container mx-auto">
+        <!-- title -->
+        <div class="title text-center">
+            <h3 class="text-lg">What our client says about us.</h3>
+            <h1 class="text-5xl lg:text-6xl font-black leading-tight">Testimonial</h1>
+        </div>
+        <!-- slides -->
+        <div class="mx-12 mt-10">
+            <div class="swiper mySwiper w-full">
+              <div class="swiper-wrapper">
+                <!-- card -->
+                <div class="swiper-slide px-2 py-12">
+                    <div class="w-full text-center">
+                        <!-- body -->
+                        <div class="about w-full bg-white flex rounded-lg shadow-default relative px-8 pt-5 pb-8">
+                            <!-- img -->
+                            <div class="bg-white w-10 h-10 rounded-full absolute left-4 -top-4">
+                                <img src="./assets/quotation.png" alt="" class="w-full h-full object-cover -scale-x-100">
+                            </div>
+                            <!-- feedbacks -->
+                            <p class="text-justify mt-5 leading-7">
+                                Placeat quia alias nihil blanditiis similique officia, accusamus cumque. Commodi totam natus, odio maxime consectetur eligendi quam eveniet velit, similique voluptatem quod.
+                            </p>
+                        </div>
+                        <!-- person -->
+                        <div class="w-full flex flex-col items-center justify-center mt-[3rem]">
+                            <img src="https://images.unsplash.com/photo-1617462825295-25458b0cde25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YmVhY2glMjBnaXJsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" class="w-12 h-12 rounded-full object-cover object-center">
+                            <h3 class="mt-2 text-[15px]">Katherine Decena</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="swiper-slide px-2 py-12">
+                    <div class="w-full text-center">
+                        <!-- body -->
+                        <div class="about w-full bg-white flex rounded-lg shadow-default relative px-8 pt-5 pb-8">
+                            <!-- img -->
+                            <div class="bg-white w-10 h-10 rounded-full absolute left-4 -top-4">
+                                <img src="./assets/quotation.png" alt="" class="w-full h-full object-cover -scale-x-100">
+                            </div>
+                            <!-- feedbacks -->
+                            <p class="text-justify mt-5 leading-7">
+                                Placeat quia alias nihil blanditiis similique officia, accusamus cumque. Commodi totam natus, odio maxime consectetur eligendi quam eveniet velit, similique voluptatem quod.
+                            </p>
+                        </div>
+                        <!-- person -->
+                        <div class="w-full flex flex-col items-center justify-center mt-[3rem]">
+                            <img src="https://images.unsplash.com/photo-1664575600850-c4b712e6e2bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHdvbWFufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="" class="w-12 h-12 rounded-full object-cover object-center">
+                            <h3 class="mt-2 text-[15px]">Emily SY</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="swiper-slide px-2 py-12">
+                    <div class="w-full text-center">
+                        <!-- body -->
+                        <div class="about w-full bg-white flex rounded-lg shadow-default relative px-8 pt-5 pb-8">
+                            <!-- img -->
+                            <div class="bg-white w-10 h-10 rounded-full absolute left-4 -top-4">
+                                <img src="./assets/quotation.png" alt="" class="w-full h-full object-cover -scale-x-100">
+                            </div>
+                            <!-- feedbacks -->
+                            <p class="text-justify mt-5 leading-7">
+                                Placeat quia alias nihil blanditiis similique officia, accusamus cumque. Commodi totam natus, odio maxime consectetur eligendi quam eveniet velit, similique voluptatem quod.
+                            </p>
+                        </div>
+                        <!-- person -->
+                        <div class="w-full flex flex-col items-center justify-center mt-[3rem]">
+                            <img src="https://images.unsplash.com/photo-1559629819-638a8f0a4303?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Ym95fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" class="w-12 h-12 rounded-full object-cover object-center">
+                            <h3 class="mt-2 text-[15px]">Alex Diaz</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="swiper-slide px-2 py-12">
+                    <div class="w-full text-center">
+                        <!-- body -->
+                        <div class="about w-full bg-white flex rounded-lg shadow-default relative px-8 pt-5 pb-8">
+                            <!-- img -->
+                            <div class="bg-white w-10 h-10 rounded-full absolute left-4 -top-4">
+                                <img src="../assets/quotation.png" alt="" class="w-full h-full object-cover -scale-x-100">
+                            </div>
+                            <!-- feedbacks -->
+                            <p class="text-justify mt-5 leading-7">
+                                Placeat quia alias nihil blanditiis similique officia, accusamus cumque. Commodi totam natus, odio maxime consectetur eligendi quam eveniet velit, similique voluptatem quod.
+                            </p>
+                        </div>
+                        <!-- person -->
+                        <div class="w-full flex flex-col items-center justify-center mt-[3rem]">
+                            <img src="https://images.unsplash.com/photo-1507438222021-237ff73669b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGJveXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" alt="" class="w-12 h-12 rounded-full object-cover object-center">
+                            <h3 class="mt-2 text-[15px]">Martin Noble</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="swiper-slide px-2 py-12">
+                    <div class="w-full text-center">
+                        <!-- body -->
+                        <div class="about w-full bg-white flex rounded-lg shadow-default relative px-8 pt-5 pb-8">
+                            <!-- img -->
+                            <div class="bg-white w-10 h-10 rounded-full absolute left-4 -top-4">
+                                <img src="../assets/quotation.png" alt="" class="w-full h-full object-cover -scale-x-100">
+                            </div>
+                            <!-- feedbacks -->
+                            <p class="text-justify mt-5 leading-7">
+                                Placeat quia alias nihil blanditiis similique officia, accusamus cumque. Commodi totam natus, odio maxime consectetur eligendi quam eveniet velit, similique voluptatem quod.
+                            </p>
+                        </div>
+                        <!-- person -->
+                        <div class="w-full flex flex-col items-center justify-center mt-[3rem]">
+                            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHdvbWFufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="" class="w-12 h-12 rounded-full object-cover object-center">
+                            <h3 class="mt-2 text-[15px]">Jocelyn Edwards</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="swiper-slide px-2 py-12">
+                    <div class="w-full text-center">
+                        <!-- body -->
+                        <div class="about w-full bg-white flex rounded-lg shadow-default relative px-8 pt-5 pb-8">
+                            <!-- img -->
+                            <div class="bg-white w-10 h-10 rounded-full absolute left-4 -top-4">
+                                <img src="../assets/quotation.png" alt="" class="w-full h-full object-cover -scale-x-100">
+                            </div>
+                            <!-- feedbacks -->
+                            <p class="text-justify mt-5 leading-7">
+                                Placeat quia alias nihil blanditiis similique officia, accusamus cumque. Commodi totam natus, odio maxime consectetur eligendi quam eveniet velit, similique voluptatem quod.
+                            </p>
+                        </div>
+                        <!-- person -->
+                        <div class="w-full flex flex-col items-center justify-center mt-[3rem]">
+                            <img src="https://images.unsplash.com/photo-1486432155089-343c871b640f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YmVhY2glMjBndXl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="" class="w-12 h-12 rounded-full object-cover object-center">
+                            <h3 class="mt-2 text-[15px]">Pennylope Joses</h3>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <!-- controls -->
+              <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- DISCOVER -->
+     <section id="discover" class="w-full h-fit bg-gray-v3 py-40 px-10 md:px-0">
+        <div class="container mx-auto flex flex-col-reverse items-center lg:flex-row gap-4">
+            <!-- text -->
+            <div class="right w-[80%] lg:w-[50%] mt-5 lg:mt-0">
+                <h1 class="heading-title font-black leading-tight">The best thing in life are the people you love, and the place you visit.</h1>
+                <p class="center-responsive-paragraph mt-8 text-xl md:leading-9 tracking-wider text-justify">Come here to escape and sit quietly on the vacation, Sand and seashells will make your day.</p>
+                <!-- contact us -->
+                <button class="center-responsive-button px-4 py-2 text-lg mt-8 rounded-md bg-primary text-white hover:bg-blue-600 duration-300">
+                    <span class="pointer-events-none">Learn more</span> <i class="fa-solid fa-angle-right pointer-events-none ml-2"></i>
+                </button>
+            </div>
+            <!-- images -->
+            <div class="left md:w-[60%]rounded-lg">
+                <div class="w-full rounded-lg">
+                    <img class="md:w-[75%] object-contain mx-auto rounded-lg" src="https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzb3J0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60" alt="">
+                </div>
+            </div>
+            </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="bg-primary-dark py-20 px-10 md:px-0">
+        <div class="container mx-auto lg:flex items-start justify-between">
+           <!-- left -->
+            <div class="left w-full lg:w-[55%]">
+            <!-- logo -->
+           <div class="logo h-full flex items-center cursor-pointer text-white">
+                <img src="./assets/logo.png" alt="" class="w-20 h-20 object-contain pointer-events-none">
+                <span class="text-xl font-md ml-5 pointer-events-none">Coastline Empire</span>
+            </div> 
+            <!-- conclusion -->
+            <p class="leading-8 text-lg mt-4 text-justify border-b-[1px] pb-3 text-white">
+                <span class="text-secondary">14 years of experience</span>
+                in real state, excellent customer service and a commiment to work hard, listen and follow through. 
+            </p>
+            <!-- links -->
+            <ul class="flex gap-x-2 mt-8 links">
+                <!-- link -->
+                <li>
+                    <a class="px-5 py-2 rounded-md cursor-pointer text-white hover:bg-slate-100 hover:text-text duration-300" href="#home">Home</a>
+                </li>
+                <!-- link -->
+                <li>
+                    <a class="px-5 py-2 rounded-md cursor-pointer text-white hover:bg-slate-100 hover:text-text duration-300" href="#about">About</a>
+                </li>
+                <!-- link -->
+                <li>
+                    <a class="px-5 py-2 rounded-md cursor-pointer text-white hover:bg-slate-100 hover:text-text duration-300" href="#services">Services</a>
+                </li>
+                <!-- link -->
+                <li>
+                    <a class="px-5 py-2 rounded-md cursor-pointer text-white hover:bg-slate-100 hover:text-text duration-300" href="#gallery">Gallery</a>
+                </li>
+                <!-- link -->
+                <li>
+                    <a class="px-5 py-2 rounded-md cursor-pointer text-white hover:bg-slate-100 hover:text-text duration-300" href="#reviews">Reviews</a>
+                </li>
+            </ul>
+            </div>
+            <!-- right -->
+            <div class="right mt-10 md:mt-20 text-white">
+                <h4 class="font-semibold text-lg">Subscribe to our newsletter</h4>
+                <!-- form -->
+                <form action="#" class="mt-2">
+                    <input type="text" class="w-full md:min-w-[400px] h-[48px] px-4 rounded-md outline-none text-text focus:border-4 focus:border-secondary bg-white" placeholder="myemail@gmail.com">
+                </form>
+                <!-- social -->
+                <ul class="flex gap-x-2 mt-6">
+                    <!-- social -->
+                    <li>
+                        <a href="#">
+                            <img src="./assets/logo's/facebook.png" alt="" class="w-12 h-12 object-fit rounded-lg">
+                        </a>
+                    </li>
+                    <!-- social -->
+                    <li>
+                        <a href="#">
+                            <img src="./assets/logo's/instagram.png" alt="" class="w-12 h-12 object-fit rounded-lg">
+                        </a>
+                    </li>
+                    <!-- social -->
+                    <li>
+                        <a href="#">
+                            <img src="./assets/logo's/twitter.png" alt="" class="w-12 h-12 object-fit rounded-lg">
+                        </a>
+                    </li>
+                    <!-- social -->
+                    <li class="bg-white p-2 rounded-lg">
+                        <a href="#" class="bg-white">
+                            <img src="./assets/logo's/gmail.png" alt="" class="w-8 h-8 object-fit rounded-lg">
+                        </a>
+                    </li>
+                    <!-- social -->
+                    <li>
+                        <a href="#">
+                            <img src="./assets/logo's/unsplash.png" alt="" class="w-12 h-12 object-fit rounded-lg">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================================================================================== -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        freeMode: true,
+        breakpoints : {
+            320 : {
+                slidesPerView : 1,
+            },
+            480 : {
+                slidesPerView : 1,
+            },
+            640 : {
+                slidesPerView : 1,
+            },
+            768 : {
+                slidesPerView : 1,
+            },
+            992 : {
+                slidesPerView : 2,
+            },
+            1200 : {
+                slidesPerView : 3,
+            },
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        });
+    </script>
+
+    <!-- smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <!-- main -->
+    <script src="./js/app.js" defer></script>
+    <!-- ================================================================================== -->
+
+</body>
+</html>
