@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+    scroll-snap-type: mandatory;
+}
+.toggleMenu{
+    @apply top-20
+}
+#gallery-card:hover #gallery-desc {
+    @apply opacity-100
+}
+/* titles */
+/* main */
+.heading-title-main{
+    @apply text-5xl md:text-6xl 
+}
+/* heading titles */
+.heading-title{
+    @apply text-[2.75rem] lg:text-[3rem] text-center lg:text-left
+}
+/* center responsive */
+.center-responsive-paragraph{
+    @apply text-lg lg:text-xl text-center lg:text-left
+}
+.center-responsive-button{
+    @apply absolute left-[50%] -translate-x-2/4 lg:static lg:left-0 lg:translate-x-0
+}
+/* titles */
+.about::before{
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    bottom: -2rem;
+    /* center */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2rem;
+    margin: auto;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    @apply bg-primary -scale-y-100 rounded-t-lg
+}
+.swiper-button::before,
+.swiper-button::after{
+    font-size: 18px;
+}
+/* nav */
+nav li a.active{
+    @apply bg-slate-200 hover:bg-primary-dark hover:text-white
+}
+/* submenu */
+.menu-sm a.active{
+    @apply w-full bg-slate-200 hover:bg-primary-dark hover:text-white
+}
+/* button */
+.ctas button.active{
+    @apply bg-primary text-white hover:bg-primary-dark duration-300
+}
+

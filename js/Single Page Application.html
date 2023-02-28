@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Application</title>
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- swiper -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/> -->
+
+     <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!--  -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script> -->
+    <script src="../js/app.js" defer></script>
+
+</head>
+<body class='font-brand text-text h-screen relative'>
+    <!-- NAVIGATION -->
+    <nav class="w-full h-20 fixed top-0 py-4 px-5 md:px-0 flex justify-between items-center shadow-lg z-50">
+        <!-- left margin -->
+        <div class="h-full container mx-auto flex justify-between items-center">
+          <!-- logo -->
+            <div class="logo h-full flex items-center cursor-pointer">
+              <img src="../assets/logo.png" alt="" class="w-14 h-14 object-cover pointer-events-none">
+              <span class="text-[18px] font-md ml-3 pointer-events-none">Logoname</span>
+            </div>
+            <!-- links -->
+            <ul class="hidden lg:flex space-x-6">
+                <!-- link -->
+                <li class="px-5 py-2 rounded-md cursor-pointer hover:bg-slate-100 duration-300">
+                    <a href="#">Home</a>
+                </li>
+                <!-- link -->
+                <li class="px-5 py-2 rounded-md cursor-pointer hover:bg-slate-100 duration-300">
+                    <a href="#">Services</a>
+                </li>
+                <!-- link -->
+                <li class="px-5 py-2 rounded-md cursor-pointer hover:bg-slate-100 duration-300">
+                    <a href="#">Pricing</a>
+                </li>
+                <!-- link -->
+                <li class="px-5 py-2 rounded-md cursor-pointer hover:bg-slate-100 duration-300">
+                    <a href="#">Reviews</a>
+                </li>
+                <!-- link -->
+                <li class="px-5 py-2 rounded-md cursor-pointer hover:bg-slate-100 duration-300">
+                    <a href="#">About</a>
+                </li>
+            </ul>
+            <!-- contact us -->
+            <button class="px-4 py-2 rounded-md bg-primary text-white hover:bg-blue-600 duration-300 hidden lg:block">
+                Contact Us
+            </button>
+            <!-- md menu -->
+            <div class="menus flex space-x-1 lg:hidden">
+                <!-- search -->
+                <button class="w-12 h-12 text-xl cursor-pointer rounded-md hover:bg-slate-300 duration-300">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+                <!-- menu -->
+                <button class="w-12 h-12 text-xl bg-slate-100 cursor-pointer rounded-md hover:bg-slate-300 duration-300" id="menu">
+                    <i class="fa-solid fa-bars pointer-events-none"></i>
+                </button>
+
+            </div>
+        </div>
+    </nav>
+    <!-- MENU SM -->
+    <div class="hidden w-full h-fit lg:hidden bg-white absolute -top-80 transition-all duration-700 py-7 shadow-default z-30" id="toggleMenu">
+        <div class="container mx-auto px-5 md:px-0">
+              <!-- links -->
+              <ul class="space-y-4">
+                  <!-- link -->
+                  <li class="px-5 py-2 rounded-md cursor-pointer hover:bg-slate-100 duration-300">
+                      <a href="#">Home</a>
+                  </li>
+                  <!-- link -->
+                  <li class="px-5 py-2 rounded-md cursor-pointer hover:bg-slate-100 duration-300">
+                      <a href="#">Services</a>
+                  </li>
+                  <!-- link -->
+                  <li class="px-5 py-2 rounded-md cursor-pointer hover:bg-slate-100 duration-300">
+                      <a href="#">Pricing</a>
+                  </li>
+                  <!-- link -->
+                  <li class="px-5 py-2 rounded-md cursor-pointer hover:bg-slate-100 duration-300">
+                      <a href="#">Reviews</a>
+                  </li>
+                  <!-- link -->
+                  <li class="px-5 py-2 rounded-md cursor-pointer hover:bg-slate-100 duration-300">
+                      <a href="#">About</a>
+                  </li>
+              </ul>
+              <!-- contact us -->
+              <button class="px-4 py-2 mt-7 ml-5 rounded-md bg-primary text-white hover:bg-blue-600 duration-300">
+                  Contact Us
+              </button>
+        </div>
+    </div>
+    <!-- MAIN -->
+    <main class="w-full h-fit lg:h-screen py-40 px-10 bg-no-repeat bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.2)),
+        url(https://images.unsplash.com/photo-1597634285596-01fd1bffe116?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);">
+        
+        <div class="container w-full mx-auto md:flex justify-between">
+            <div class="md:w-[50%] text-center md:text-left text-white md:mt-20">
+                <h3 class="text-lg">Nice Scenery + Hotel + Food</h3>
+                <h1 class="text-6xl font-black">Experience a <span>home</span> like no other before!</h1>
+                <p class="mt-5 text-xl md:leading-9 tracking-wider">You'll need to get your rest, and since Kent isn't exactly a top tourist destination, you should be able to find something reasonable.</p>
+                <!-- contact us -->
+                <button class="px-4 py-2 text-lg mt-5 rounded-md bg-secondary text-white hover:bg-blue-600 duration-300">
+                    Contact Us
+                </button>
+            </div>
+             <!-- images -->
+             <div class="lg:w-[40%] h-fit grid grid-cols-2 gap-4 mt-10">
+                <img class="w-full h-52 object-cover rounded-md shadow-xl border-8" src="https://images.unsplash.com/photo-1544536871-6e891baa163f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGJlYWNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+                <img class="w-full h-52 object-cover rounded-md shadow-xl border-8" src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGJlYWNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+                <img class="w-full h-52 object-cover rounded-md shadow-xl border-8" src="https://images.unsplash.com/photo-1473186578172-c141e6798cf4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fGJlYWNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+                <img class="w-full h-52 object-cover rounded-md shadow-xl border-8" src="https://images.unsplash.com/photo-1538964173425-93884d739596?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fGJlYWNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+            </div>
+        </div>
+
+    </main>
+    <!-- ABOUT -->
+    <section class="w-full h-fit container mx-auto py-40 px-10 md:px-0 flex flex-col lg:flex-row gap-4">
+        <!-- images -->
+        <div class="left md:w-[60%] flex gap-8">
+            <div class="w-full h-fit">
+                <img class="w-full h-full object-contain -mt-28" src="../assets/intro-img.png" alt="">
+            </div>
+        </div>
+        <!-- text -->
+        <div class="right md:w-[40%]">
+                <h1 class="text-5xl font-black leading-tight">NOT  YOUR  <span class="text-secondary stroke relative">AVERAGE</span> REALTOR EMPRESS</h1>
+                <p class="mt-8 text-xl md:leading-9 tracking-wider text-justify">Realtore Empress has an eye for seeing a property’s  potential coordinating design, and effectively marketing to home owners top dollar on the sale. </p>
+                <!-- contact us -->
+                <button class="px-4 py-2 text-lg mt-8 rounded-md bg-primary text-white hover:bg-blue-600 duration-300">
+                    <span class="pointer-events-none">Learn more</span> <i class="fa-solid fa-angle-right pointer-events-none ml-2"></i>
+                </button>
+        </div>
+
+    </section>
+    <!-- SERVICES -->
+    <section id="services" class="hidden py-20 px-10 bg-no-repeat bg-cover bg-center" style="background-image: url(https://images.unsplash.com/photo-1506477331477-33d5d8b3dc85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGJlYWNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);">
+        <div class="md:flex gap-8 container mx-auto">
+            <!-- title -->
+            <div class="title md:w-[30%] flex flex-col justify-center">
+                <h3 class="text-lg">These is what you need!</h3>
+                <h1 class="text-5xl font-black leading-tight">OUR <span class="stroke relative">SERVICES</span></h1>
+            </div>
+            <!-- cards -->
+            <div class="md:w-[65%] grid md:grid-cols-3 gap-4 rounded-md mt-10 md:mt-0">
+                <!-- card -->
+                <div class="card bg-white rounded-md shadow-lg">
+                    <div class="img-container w-full">
+                        <img class="w-full h-[200px] object-cover rounded-md" src="https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVzb3J0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+                    </div>
+                    <!-- texts -->
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Potential Roi</h2>
+                        <p class="mt-2">Whether you are looking to buy a fixer upper or renovate your current home sale, we will walk you through potential returns for projects. </p>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="card bg-white rounded-md shadow-lg">
+                    <div class="img-container w-full">
+                        <img class="w-full h-[200px] object-cover rounded-md" src="https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVzb3J0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+                    </div>
+                    <!-- texts -->
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Potential Roi</h2>
+                        <p class="mt-2">Whether you are looking to buy a fixer upper or renovate your current home sale, we will walk you through potential returns for projects. </p>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="card bg-white rounded-md shadow-lg">
+                    <div class="img-container w-full">
+                        <img class="w-full h-[200px] object-cover rounded-md" src="https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVzb3J0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+                    </div>
+                    <!-- texts -->
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Potential Roi</h2>
+                        <p class="mt-2">Whether you are looking to buy a fixer upper or renovate your current home sale, we will walk you through potential returns for projects. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- TEAM -->
+    <section class="hidden w-full h-fit bg-gray-v3 py-40 px-10 md:px-0">
+        <div class="container mx-auto flex flex-col-reverse lg:flex-row gap-4">
+            <!-- text -->
+        <div class="right md:w-[50%]">
+            <h3 class="text-lg">About the team</h3>
+            <h1 class="text-5xl font-black leading-tight">WHO ARE WE?</h1>
+            <p class="mt-8 text-xl md:leading-9 tracking-wider text-justify">With <span class="text-primary">14 years of experience</span> in real state, excellent customer service and a commiment to work hard, listen and follow through. We provide quality service to build relationships with clients and more importantly, maintain those relationship by communicating effectively. </p>
+            <!-- contact us -->
+            <button class="px-4 py-2 text-lg mt-8 rounded-md bg-primary text-white hover:bg-blue-600 duration-300">
+                <span class="pointer-events-none">Learn more</span> <i class="fa-solid fa-angle-right pointer-events-none ml-2"></i>
+            </button>
+    </div>
+    <!-- images -->
+    <div class="left md:w-[60%]">
+        <div class="w-full h-fit">
+            <img class="w-[75%] h-full object-contain md:-mt-16 mx-auto" src="../assets/proof-img.png" alt="">
+        </div>
+    </div>
+        </div>
+    </section>
+    <!-- GALLERY -->
+    <div class="hidden py-40 container mx-auto px-10 md:px-0">
+        <!-- heading -->
+        <div class="md:flex justify-between items-center">
+            <!-- text -->
+            <div class="text">
+                <h3 class="text-lg">These is what you need!</h3>
+                <h1 class="text-5xl font-black leading-tight">OUR <span class="stroke relative">GALLERY</span></h1>
+            </div>
+            <!-- cta -->
+            <div class="flex gap-3 mt-10 md:mt-0">
+                <button class="px-6 py-2 rounded-full bg-primary text-white hover:bg-blue-600 duration-300">
+                    All
+                </button>
+                <button class="px-4 py-2 rounded-full bg-gray-v2 text-text hover:bg-blue-600 hover:text-white duration-300">
+                    Townhomes
+                </button>
+                <button class="px-4 py-2 rounded-full bg-gray-v2 text-text hover:bg-blue-600 hover:text-white duration-300">
+                    Multi-family
+                </button>
+                <button class="px-4 py-2 rounded-full bg-gray-v2 text-text hover:bg-blue-600 hover:text-white duration-300">
+                    Apartments
+                </button>
+            </div>
+        </div>
+        <!-- cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 md:mt-20">
+            <!-- card -->
+            <div class="card cursor-pointer relative shadow-default" id="gallery-card">
+                <img class="rounded-md pointer-events-none" src="https://images.unsplash.com/photo-1586611292717-f828b167408c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="">
+                <div class="w-full h-fit absolute bottom-0 bg-overlay text-white py-3 px-4 opacity-0 duration-700" id="gallery-desc">
+                    <div class="flex gap-4 items-center">
+                        <h2 class="text-lg font-semibold w-full max-w-[70%]">Potential Roi</h2>
+                        <div class="flex gap-2 text-secondary">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-md">
+                        <i class="fa-solid fa-location-dot mr-2"></i>
+                        <span>California</span>
+                    </h4>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card cursor-pointer relative shadow-default" id="gallery-card">
+                <img class="rounded-md pointer-events-none" src="https://images.unsplash.com/photo-1586611292717-f828b167408c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="">
+                <div class="w-full h-fit absolute bottom-0 bg-overlay text-white py-3 px-4 opacity-0 duration-700" id="gallery-desc">
+                    <div class="flex gap-4 items-center">
+                        <h2 class="text-lg font-semibold w-full max-w-[70%]">Potential Roi</h2>
+                        <div class="flex gap-2 text-secondary">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-md">
+                        <i class="fa-solid fa-location-dot mr-2"></i>
+                        <span>California</span>
+                    </h4>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card cursor-pointer relative shadow-default" id="gallery-card">
+                <img class="rounded-md pointer-events-none" src="https://images.unsplash.com/photo-1586611292717-f828b167408c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="">
+                <div class="w-full h-fit absolute bottom-0 bg-overlay text-white py-3 px-4 opacity-0 duration-700" id="gallery-desc">
+                    <div class="flex gap-4 items-center">
+                        <h2 class="text-lg font-semibold w-full max-w-[70%]">Potential Roi</h2>
+                        <div class="flex gap-2 text-secondary">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-md">
+                        <i class="fa-solid fa-location-dot mr-2"></i>
+                        <span>California</span>
+                    </h4>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card cursor-pointer relative shadow-default" id="gallery-card">
+                <img class="rounded-md pointer-events-none" src="https://images.unsplash.com/photo-1586611292717-f828b167408c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="">
+                <div class="w-full h-fit absolute bottom-0 bg-overlay text-white py-3 px-4 opacity-0 duration-700" id="gallery-desc">
+                    <div class="flex gap-4 items-center">
+                        <h2 class="text-lg font-semibold w-full max-w-[70%]">Potential Roi</h2>
+                        <div class="flex gap-2 text-secondary">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-md">
+                        <i class="fa-solid fa-location-dot mr-2"></i>
+                        <span>California</span>
+                    </h4>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card cursor-pointer relative shadow-default" id="gallery-card">
+                <img class="rounded-md pointer-events-none" src="https://images.unsplash.com/photo-1586611292717-f828b167408c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="">
+                <div class="w-full h-fit absolute bottom-0 bg-overlay text-white py-3 px-4 opacity-0 duration-700" id="gallery-desc">
+                    <div class="flex gap-4 items-center">
+                        <h2 class="text-lg font-semibold w-full max-w-[70%]">Potential Roi</h2>
+                        <div class="flex gap-2 text-secondary">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-md">
+                        <i class="fa-solid fa-location-dot mr-2"></i>
+                        <span>California</span>
+                    </h4>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card cursor-pointer relative shadow-default" id="gallery-card">
+                <img class="rounded-md pointer-events-none" src="https://images.unsplash.com/photo-1586611292717-f828b167408c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="">
+                <div class="w-full h-fit absolute bottom-0 bg-overlay text-white py-3 px-4 opacity-0 duration-700" id="gallery-desc">
+                    <div class="flex gap-4 items-center">
+                        <h2 class="text-lg font-semibold w-full max-w-[70%]">Potential Roi</h2>
+                        <div class="flex gap-2 text-secondary">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-md">
+                        <i class="fa-solid fa-location-dot mr-2"></i>
+                        <span>California</span>
+                    </h4>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card cursor-pointer relative shadow-default" id="gallery-card">
+                <img class="rounded-md pointer-events-none" src="https://images.unsplash.com/photo-1586611292717-f828b167408c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="">
+                <div class="w-full h-fit absolute bottom-0 bg-overlay text-white py-3 px-4 opacity-0 duration-700" id="gallery-desc">
+                    <div class="flex gap-4 items-center">
+                        <h2 class="text-lg font-semibold w-full max-w-[70%]">Potential Roi</h2>
+                        <div class="flex gap-2 text-secondary">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-md">
+                        <i class="fa-solid fa-location-dot mr-2"></i>
+                        <span>California</span>
+                    </h4>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card cursor-pointer relative shadow-default" id="gallery-card">
+                <img class="rounded-md pointer-events-none" src="https://images.unsplash.com/photo-1586611292717-f828b167408c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="">
+                <div class="w-full h-fit absolute bottom-0 bg-overlay text-white py-3 px-4 opacity-0 duration-700" id="gallery-desc">
+                    <div class="flex gap-4 items-center">
+                        <h2 class="text-lg font-semibold w-full max-w-[70%]">Potential Roi</h2>
+                        <div class="flex gap-2 text-secondary">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-md">
+                        <i class="fa-solid fa-location-dot mr-2"></i>
+                        <span>California</span>
+                    </h4>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card cursor-pointer relative shadow-default" id="gallery-card">
+                <img class="rounded-md pointer-events-none" src="https://images.unsplash.com/photo-1586611292717-f828b167408c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="">
+                <div class="w-full h-fit absolute bottom-0 bg-overlay text-white py-3 px-4 opacity-0 duration-700" id="gallery-desc">
+                    <div class="flex gap-4 items-center">
+                        <h2 class="text-lg font-semibold w-full max-w-[70%]">Potential Roi</h2>
+                        <div class="flex gap-2 text-secondary">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-md">
+                        <i class="fa-solid fa-location-dot mr-2"></i>
+                        <span>California</span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <!-- contact us -->
+        <div class="flex justify-center items-center">
+            <button class="px-4 py-2 text-lg mt-8 rounded-md text-text hover:bg-blue-600 hover:text-white duration-300">
+                <span class="pointer-events-none">See more</span>
+                <i class="fa-solid fa-angle-down ml-4"></i>
+            </button>
+        </div>
+    </div>
+    <!-- REVIEWS -->
+    <section class="py-40 px-10 bg-primary-light">
+        <div class="container mx-auto">
+        <!-- title -->
+        <div class="title text-left md:text-center">
+            <h3 class="text-lg">What our client says about us.</h3>
+            <h1 class="text-5xl font-black leading-tight">Testimonial</h1>
+        </div>
+      <!-- slider -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="card swiper-slide bg-slate-200 w-[320px]">
+                    <div class="body w-full">
+                        <!-- about -->
+                       <div class="about w-full bg-white py-5 rounded-md relative flex items-center justify-center">
+                           <div class="quote-icon w-10 h-10 rounded-full absolute left-4 -top-4 bg-white">
+                               <img class="w-full h-full rounded-full -scale-x-100" src="../assets/quotation.png" alt="">
+                           </div>
+                           <div class="card-text mt-5 text-center px-5">
+                               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore veniam optio quas nesciunt corporis iusto magni nam porro earum laudantium!</p>
+                           </div>
+                       </div>
+                       <!-- person -->
+                       <div class="flex flex-col items-center justify-center mt-12">
+                           <!-- image -->
+                          <div class="w-14 h-14 rounded-full">
+                               <img class="w-full h-full rounded-full object-cover" src="https://images.unsplash.com/photo-1529911194209-8578109840df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
+                           </div>
+                           <!-- name -->
+                           <div class="name mt-4">
+                               <span>Katherine Decena</span>
+                           </div>
+                       </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+      <!-- slider -->
+        </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper', {
+      slidesPerView: 3,
+      direction: getDirection(),
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      on: {
+        resize: function () {
+          swiper.changeDirection(getDirection());
+        },
+      },
+    });
+
+    function getDirection() {
+      var windowWidth = window.innerWidth;
+      var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+      return direction;
+    }
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
