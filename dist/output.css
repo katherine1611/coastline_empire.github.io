@@ -3021,6 +3021,10 @@ nav li a.active:hover {
     margin-top: 5rem;
   }
 
+  .md\:block {
+    display: block;
+  }
+
   .md\:flex {
     display: flex;
   }
